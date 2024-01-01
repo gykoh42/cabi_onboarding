@@ -55,21 +55,29 @@
         height: 100%;
         width: 90px;
         display: flex;
+        border-right: 1px solid #e2e2e2;
         flex-direction: column;
       }
 
       .leftNavigation ul {
         list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
       }
+
       .leftNavigation li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 48px;
         color: gray;
         cursor: pointer;
-        padding: 20px 20px;
         border-radius: 10px;
-        margin-bottom: 20px;
-        color: gray;
+        margin-top: 30px;
         text-align: center;
         transition: background-color 0.2ms;
       }
@@ -97,6 +105,15 @@
         <li>2층</li>
         <li>4층</li>
         <li>5층</li>
+      </ul>
+    </nav>
+    <nav class="leftSectionNavigation">
+      <ul>
+        <li>End of Cluster1</li>
+        <li>Cluster 1 - OA</li>
+        <li>Cluster 1 - Terrace</li>
+        <li>Oasis</li>
+        <li>End of Cluster 2</li>
       </ul>
     </nav>
   </body>
