@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .topNavigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: #9747ff;
+        padding: 20px;
+      }
+
+      .leftSection,
+      .rightSection {
+        display: flex;
+        align-items: center;
+      }
+
+      .cabiText {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 30px;
+      }
+
+      .rightSection img {
+        height: 30px;
+        width: auto;
+        margin-left: 20px;
+      }
+
+      .leftNavigation {
+        height: 100%;
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .leftNavigation ul {
+        list-style: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+      .leftNavigation li {
+        color: gray;
+        cursor: pointer;
+        padding: 20px 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        color: gray;
+        text-align: center;
+        transition: background-color 0.2ms;
+      }
+
+      .leftNavigation li:hover {
+        background-color: #9747ff;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="topNavigation">
+      <div class="leftSection">
+        <img src="./Vector 139.svg" alt="로그인 이미지" />
+        <span class="cabiText">Cabi</span>
+      </div>
+      <div class="rightSection">
+        <img src="./account_circle.svg" alt="유저 이미지" />
+        <img src="package.svg" alt="패키지 이미지" />
+      </div>
+    </nav>
+    <nav class="leftNavigation">
+      <ul>
+        <li>Home</li>
+        <li>2층</li>
+        <li>4층</li>
+        <li>5층</li>
+      </ul>
+    </nav>
+  </body>
+</html>
