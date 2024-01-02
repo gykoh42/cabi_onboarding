@@ -4,155 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main page</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-      }
-
-      .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-
-      .sideNavs {
-        display: flex;
-        height: 100%;
-      }
-
-      .leftNavigation,
-      .leftSectionNavigation {
-        flex: 0 0 auto;
-      }
-
-      .topNavigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-        background-color: #9747ff;
-        padding: 20px;
-      }
-
-      .leftSection,
-      .rightSection {
-        display: flex;
-        align-items: center;
-      }
-
-      .cabiText {
-        color: #ffffff;
-        font-size: 24px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin-left: 30px;
-      }
-
-      .rightSection img {
-        height: 30px;
-        width: auto;
-        margin-left: 20px;
-      }
-
-      .leftNavigation {
-        height: 100%;
-        width: 90px;
-        display: flex;
-        border-right: 1px solid #e2e2e2;
-        flex-direction: column;
-      }
-
-      .leftNavigation ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-      }
-
-      .leftNavigation li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 70px;
-        height: 48px;
-        color: gray;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-top: 30px;
-        text-align: center;
-        transition: background-color 0.2ms;
-      }
-
-      .leftNavigation li:hover {
-        background-color: #9747ff;
-        color: white;
-      }
-
-      .leftSectionNavigation {
-        height: 100%;
-        width: 220px;
-        display: flex;
-        border-right: 1px solid #e2e2e2;
-        flex-direction: column;
-      }
-
-      .leftSectionNavigation ul {
-        margin-top: 30px;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;
-      }
-
-      .leftSectionNavigation li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 25px;
-        width: 200px;
-        height: 40px;
-        color: gray;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: background-color 0.2ms;
-      }
-
-      .leftSectionNavigation li:hover {
-        background-color: #9747ff;
-        color: white;
-      }
-
-      .mainSection {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: column;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 16px;
-      }
-
-      .mainSection p {
-        margin-top: 30px;
-        color: gray;
-      }
-
-      .content {
-        display: flex;
-        width: 100%;
-        height: calc(100% - 80px);
-      }
-    </style>
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
     <nav class="topNavigation">
@@ -169,7 +21,7 @@
       <nav class="sideNavs">
         <nav class="leftNavigation">
           <ul>
-            <li>Home</li>
+            <li><a href="./index.html">Home</a></li>
             <li>2층</li>
             <li>4층</li>
             <li>5층</li>
@@ -187,6 +39,48 @@
       </nav>
       <div class="mainSection">
         <p>2층 - Oasis</p>
+        <ul>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">1</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">2</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">3</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">4</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">5</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">6</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">7</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">8</span>
+            <span class="font">42Cabi</span>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
