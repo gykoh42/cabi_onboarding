@@ -42,6 +42,12 @@
         padding: 20px;
       }
 
+      .content {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 80px);
+      }
+
       .leftSection,
       .rightSection {
         display: flex;
@@ -136,21 +142,67 @@
       .mainSection {
         flex-grow: 1;
         display: flex;
-        justify-content: center;
-        align-items: column;
+        flex-direction: column;
+        align-items: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 16px;
       }
 
       .mainSection p {
+        justify-content: center;
+        align-items: center;
         margin-top: 30px;
         color: gray;
       }
 
-      .content {
+      .mainSection ul {
         display: flex;
-        width: 100%;
-        height: calc(100% - 80px);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .mainSection li {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 45px;
+        width: 80px;
+        height: 80px;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 5px;
+        background-color: #9747ff;
+      }
+
+      .icon,
+      .number {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+      }
+
+      .icon {
+        top: 10px;
+        left: 10px;
+      }
+
+      .number {
+        top: 10px;
+        right: 5px;
+        font-size: 13px;
+        color: white;
+      }
+
+      .font {
+        align-self: flex-sart;
+        padding-left: 10px;
+        text-align: left;
+        font-size: 14px;
       }
     </style>
   </head>
@@ -187,6 +239,48 @@
       </nav>
       <div class="mainSection">
         <p>2층 - Oasis</p>
+        <ul>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">1</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">2</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">3</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">4</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">5</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">6</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">7</span>
+            <span class="font">42Cabi</span>
+          </li>
+          <li>
+            <img class="icon" src="./user.svg" alt="유저 아이콘" />
+            <span class="number">8</span>
+            <span class="font">42Cabi</span>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
