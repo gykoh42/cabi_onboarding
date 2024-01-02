@@ -132,6 +132,26 @@
         background-color: #9747ff;
         color: white;
       }
+
+      .mainSection {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: column;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+      }
+
+      .mainSection p {
+        margin-top: 30px;
+        color: gray;
+      }
+
+      .content {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 80px);
+      }
     </style>
   </head>
   <body>
@@ -145,27 +165,29 @@
         <img src="package.svg" alt="패키지 이미지" />
       </div>
     </nav>
-    <nav class="sideNavs">
-      <nav class="leftNavigation">
-        <ul>
-          <li>Home</li>
-          <li>2층</li>
-          <li>4층</li>
-          <li>5층</li>
-        </ul>
+    <div class="content">
+      <nav class="sideNavs">
+        <nav class="leftNavigation">
+          <ul>
+            <li>Home</li>
+            <li>2층</li>
+            <li>4층</li>
+            <li>5층</li>
+          </ul>
+        </nav>
+        <nav class="leftSectionNavigation">
+          <ul>
+            <li>End of Cluster1</li>
+            <li>Cluster 1 - OA</li>
+            <li>Cluster 1 - Terrace</li>
+            <li>Oasis</li>
+            <li>End of Cluster 2</li>
+          </ul>
+        </nav>
       </nav>
-      <nav class="leftSectionNavigation">
-        <ul>
-          <li>End of Cluster1</li>
-          <li>Cluster 1 - OA</li>
-          <li>Cluster 1 - Terrace</li>
-          <li>Oasis</li>
-          <li>End of Cluster 2</li>
-        </ul>
-      </nav>
-    </nav>
-    <div class="Main">
-      <div>2층 - Oasis</div>
+      <div class="mainSection">
+        <p>2층 - Oasis</p>
+      </div>
     </div>
   </body>
 </html>
