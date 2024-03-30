@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mainSection ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.sideNavs {
+  display: flex;
+  height: 100vh;
+}
+
+.leftNavigation,
+.leftSectionNavigation {
+  flex: 0 0 auto;
+}
+
+.topNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  background-color: #9747ff;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 80px);
+}
+
+.leftSection,
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.cabiText {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 30px;
+}
+
+.leftNavigation {
+  height: 100%;
+  width: 90px;
+  display: flex;
+  border-right: 1px solid #e2e2e2;
+  flex-direction: column;
+}
+
+.leftNavigation ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.leftNavigation li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 48px;
+  color: gray;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+  transition: background-color 0.2ms;
+}
+
+.leftNavigation li:hover {
+  background-color: #9747ff;
+  color: white;
+}
+
+.leftSectionNavigation {
+  height: 100%;
+  width: 220px;
+  display: flex;
+  border-right: 1px solid #e2e2e2;
+  flex-direction: column;
+}
+
+.leftSectionNavigation ul {
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftSectionNavigation li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 25px;
+  width: 200px;
+  height: 40px;
+  color: gray;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.2ms;
+}
+
+.leftNavigation li.selected,
+.leftSectionNavigation li.selected {
+  background-color: #9747ff;
+  color: white;
+}
+
+.leftSectionNavigation li:hover {
+  background-color: #9747ff;
+  color: white;
+}
+
+.mainSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.mainSection p {
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: gray;
+}
+
+.mainSection ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.icon,
+.number {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+}
+
+.icon {
+  top: 10px;
+  left: 10px;
+}
+
+.number {
+  position: relative;
+  top: -39px;
+  right: 4px;
+  font-size: 12px;
+}
+
+.font {
+  position: relative;
+  align-self: flex-start;
+  top: -8px;
+  right: -1px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.leftNavigation a,
+.leftSectionNavigation a {
+  color: gray;
+  text-decoration: none;
+}
+
+.leftNavigation a:hover,
+.leftSectionNavigation a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.loginIcon {
+  width: 35px;
+  height: 35px;
+  margin-left: 8px;
+}
+
+.userIcon {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.packageIcon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 1070px) {
+  .mainSection ul {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainSection ul {
+    width: 400px;
+  }
+
+  .leftSectionNavigation {
+    display: none;
+  }
+
+  .sideNavs {
+    flex-direction: column;
+  }
+
+  .leftNavigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    border-top: 1px solid #e2e2e2;
+    border-right: none;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .leftNavigation ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .leftNavigation li {
+    margin-top: 0;
+    margin-right: 10px;
+  }
+
+  .content {
+    height: calc(100% - 80px - 90px);
+  }
+}
