@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 import axios from "axios";
 import CabinetSection from "./CabinetSection";
 import "./App.css";
@@ -23,34 +24,30 @@ function App() {
     setSelectedSection(section);
   };
 
+  const currentFloorData = data.find(
+    (floor) => floor.floorNumber === selectedFloor
+  );
+
   const currentSectionData = data
     .find((floor) => floor.floorNumber === selectedFloor)
     ?.sections.find((section) => section.section === selectedSection);
 
+  const sectionLabels = currentFloorData
+    ? currentFloorData.sections.map((section) => section.section)
+    : [];
+
   return (
     <>
-      <nav className="topNavigation">
-        <div className="leftSection">
-          <img
-            className="loginIcon"
-            src="src/assets/Vector 139.svg"
-            alt="login icon"
-          />
+      <TopNavigation>
+        <LeftSection>
+          <LoginIcon src="src/assets/Vector 139.svg" alt="login icon" />
           <span className="cabiText">Cabi</span>
-        </div>
-        <div className="rightSection">
-          <img
-            className="userIcon"
-            src="src/assets/account_circle.svg"
-            alt="user icon"
-          />
-          <img
-            className="packageIcon"
-            src="src/assets/package.svg"
-            alt="package icon"
-          />
-        </div>
-      </nav>
+        </LeftSection>
+        <RightSection>
+          <UserIcon src="src/assets/account_circle.svg" alt="user icon" />
+          <PackageIcon src="src/assets/package.svg" alt="package icon" />
+        </RightSection>
+      </TopNavigation>
       <div className="content">
         <nav className="sideNavs">
           <nav className="leftNavigation">
@@ -71,7 +68,7 @@ function App() {
           </nav>
           <nav className="leftSectionNavigation">
             <ul>
-              {["A", "B", "C"].map((section) => (
+              {sectionLabels.map((section) => (
                 <li
                   key={section}
                   className={selectedSection === section ? "selected" : ""}
@@ -96,5 +93,43 @@ function App() {
     </>
   );
 }
+
+const LoginIcon = styled.img`
+  width: 35px;
+  height: 35px;
+  margin-left: 8px;
+`;
+
+const UserIcon = styled.img`
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  margin-right: 16px;
+`;
+
+const PackageIcon = styled.img`
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+`;
+
+const LeftSection = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const RightSection = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const TopNavigation = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  background-color: #9747ff;
+  padding: 20px;
+`;
 
 export default App;
