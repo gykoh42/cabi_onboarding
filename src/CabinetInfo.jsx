@@ -1,6 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
+function CabinetInfo({ cabinetId, status, user }) {
+  const available = status === "AVAILABLE";
+  const userIcon = available
+    ? "src/assets/user_white.svg"
+    : "src/assets/user.svg";
+
+  return (
+    <CabinetItem $available={available}>
+      <Icon className="icon" src={userIcon} alt="user icon" />
+      <Number $length={cabinetId.toString().length}>{cabinetId}</Number>
+      <UserName>{user ? user : "-"}</UserName>
+    </CabinetItem>
+  );
+}
+
 const CabinetItem = styled.li`
   position: relative;
   display: flex;
@@ -16,25 +31,28 @@ const CabinetItem = styled.li`
   color: ${({ $available }) => ($available ? "white" : "black")};
 `;
 
-function CabinetInfo({ cabinetId, status, user }) {
-  const available = status === "AVAILABLE";
-  const userIcon = available
-    ? "src/assets/user_white.svg"
-    : "src/assets/user.svg";
+const Icon = styled.img`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 15px;
+  width: 15px;
+`;
 
-  const numberStyle = {
-    right: cabinetId.toString().length === 1 ? "-62px" : "-54px",
-  };
+const Number = styled.span`
+  position: absolute;
+  top: 10px;
+  right: ${({ $length }) => ($length === 1 ? "8px" : "10px")};
+  font-size: 12px;
+`;
 
-  return (
-    <CabinetItem $available={available ? 1 : 0}>
-      <img className="icon" src={userIcon} alt="user icon" />
-      <span className="number" style={numberStyle}>
-        {cabinetId}
-      </span>
-      <span className="font">{user ? user : "-"}</span>
-    </CabinetItem>
-  );
-}
+const UserName = styled.span`
+  position: relative;
+  align-self: flex-start;
+  right: -1px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 12px;
+`;
 
 export default CabinetInfo;
